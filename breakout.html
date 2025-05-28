@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>打砖块游戏</title>
+  <style>
+    canvas {
+      border: 2px solid #2c3e50;
+      border-radius: 8px;
+      background: #ecf0f1;
+    }
+    .game-container {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 860px;
+    }
+    canvas {
+      border: 2px solid #2c3e50;
+      border-radius: 12px;
+      background: linear-gradient(160deg, #ffffff 0%, #f8f9fa 100%);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .controls {
+      margin: 15px 0;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 0 5px;
+      background: linear-gradient(145deg, #3498db, #2980b9);
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <canvas id="breakoutCanvas" width="800" height="500"></canvas>
+    <div class="controls">
+      <button id="startBtn">开始游戏</button>
+      <button id="resetBtn">重新开始</button>
+      <a href="index.html" class="return-btn">返回首页</a>
+    </div>
+  </div>
+  <script src="breakout.js"></script>
+</body>
+</html>

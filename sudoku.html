@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数独游戏</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .sudoku-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .sudoku-board {
+            display: grid;
+            grid-template-columns: repeat(9, 50px);
+            grid-template-rows: repeat(9, 50px);
+            gap: 1px;
+            margin: 20px 0;
+            background-color: #333;
+            padding: 3px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .sudoku-cell {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+            background-color: white;
+            transition: all 0.2s;
+        }
+        
+        .sudoku-cell:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .sudoku-cell.selected {
+            background-color: #e3f2fd;
+            box-shadow: inset 0 0 0 2px #2196F3;
+        }
+        
+        .sudoku-cell.fixed {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .sudoku-cell:nth-child(3n) {
+            border-right: 2px solid #333;
+        }
+        
+        .sudoku-row:nth-child(3n) .sudoku-cell {
+            border-bottom: 2px solid #333;
+        }
+        
+        .controls {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        button, select {
+            padding: 8px 16px;
+            margin: 0 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #2196F3;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        
+        button:hover {
+            background-color: #0d8bf2;
+        }
+        
+        select {
+            background-color: white;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 16px;
+            background-color: #607d8b;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        
+        .back-link:hover {
+            background-color: #546e7a;
+        }
+    </style>
+</head>
+<body>
+    <div class="sudoku-container">
+        <h1>数独游戏</h1>
+        <div class="controls">
+            <select id="difficulty">
+                <option value="easy">简单</option>
+                <option value="medium">中等</option>
+                <option value="hard">困难</option>
+            </select>
+            <button id="newGameBtn">新游戏</button>
+            <button id="checkBtn">检查</button>
+            <button id="solveBtn">解答</button>
+        </div>
+        <div id="sudokuBoard" class="sudoku-board"></div>
+        <a href="index.html" class="back-link">返回首页</a>
+    </div>
+    <script src="sudoku.js"></script>
+</body>
+</html>

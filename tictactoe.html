@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>井字棋</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #game-container {
+            text-align: center;
+        }
+        canvas {
+            border: 2px solid #333;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+        #status {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .mode-selector {
+            margin-bottom: 20px;
+        }
+        .mode-selector button {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>井字棋</h1>
+        <div id="status">玩家X的回合</div>
+        <canvas id="ticTacToeCanvas" width="300" height="300"></canvas>
+        <button id="resetBtn">重新开始</button>
+        <a href="index.html" class="back-btn">返回首页</a>
+    </div>
+    <script src="tictactoe.js"></script>
+</body>
+</html>

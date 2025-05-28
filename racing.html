@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D赛车游戏</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        canvas {
+            display: block;
+            margin: 20px auto;
+            background-color: #222;
+        }
+        .game-container {
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .score {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>2D赛车游戏</h1>
+        <div class="score">分数: <span id="score">0</span></div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <button id="restartBtn">重新开始</button>
+    </div>
+    <script src="racing.js"></script>
+</body>
+</html>

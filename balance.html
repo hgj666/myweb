@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平衡球游戏</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #game-container {
+            text-align: center;
+        }
+        canvas {
+            border: 2px solid #333;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+        #status {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .instructions {
+            margin: 20px 0;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>平衡球游戏</h1>
+        <div id="status">使用方向键控制平台</div>
+        <div class="instructions">
+            <p>使用键盘方向键控制平台倾斜，保持小球不掉落</p>
+        </div>
+        <canvas id="balanceCanvas" width="500" height="500"></canvas>
+        <button id="resetBtn">重新开始</button>
+        <a href="index.html" class="back-btn">返回首页</a>
+    </div>
+    <script src="balance.js"></script>
+</body>
+</html>

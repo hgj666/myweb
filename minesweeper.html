@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扫雷游戏</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="minesweeper.js"></script>
+    <script>
+        window.onload = function() {
+            initGame();
+        };
+    </script>
+</head>
+<body>
+    <div class="game-container">
+        <h1>扫雷游戏</h1>
+        <canvas id="gameCanvas" width="400" height="400" style="display: block; margin: 20px auto;"></canvas>
+        <div class="game-controls">
+            <button id="restartBtn">重新开始</button>
+            <div class="difficulty-buttons">
+                <button class="difficulty-btn" data-difficulty="easy">初级</button>
+                <button class="difficulty-btn" data-difficulty="medium">中级</button>
+                <button class="difficulty-btn" data-difficulty="hard">高级</button>
+            </div>
+            <div id="statusDisplay">剩余地雷: 10</div>
+            <a href="index.html" class="back-link">返回首页</a>
+        </div>
+    </div>
+</body>
+</html>

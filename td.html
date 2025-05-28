@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>塔防游戏</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        #gameContainer {
+            position: relative;
+        }
+        
+        #tdCanvas {
+            background-color: #fff;
+            border: 2px solid #333;
+        }
+        
+        #startBtn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        #startBtn:hover {
+            background-color: #45a049;
+        }
+        
+        .game-info {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>塔防游戏</h1>
+    <div id="gameContainer">
+        <canvas id="tdCanvas" width="800" height="600"></canvas>
+    </div>
+    <button id="startBtn">开始游戏</button>
+    <div class="game-info">
+        <p>金钱: <span id="money">100</span></p>
+        <p>生命值: <span id="health">20</span></p>
+        <p>波数: <span id="wave">1</span></p>
+    </div>
+    
+    <script src="td.js"></script>
+</body>
+</html>

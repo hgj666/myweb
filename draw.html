@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绘画游戏</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #drawing-tools {
+            margin: 10px 0;
+            display: flex;
+            gap: 10px;
+        }
+        #color-picker {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>绘画游戏</h1>
+        <div id="status">选择颜色开始绘画</div>
+        <div id="drawing-tools">
+            <input type="color" id="color-picker" value="#000000">
+            <button id="clear-btn">清除画布</button>
+        </div>
+        <canvas id="drawCanvas" width="500" height="500"></canvas>
+        <a href="index.html" class="back-btn">返回首页</a>
+    </div>
+    <script src="draw.js"></script>
+</body>
+</html>
